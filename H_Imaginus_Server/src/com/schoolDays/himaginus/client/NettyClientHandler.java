@@ -1,5 +1,7 @@
 package com.schoolDays.himaginus.client;
 
+import java.nio.ByteBuffer;
+
 import com.himaginus.common.data.StringData;
 import com.himaginus.common.packet.RequestPacket;
 import com.himaginus.common.packet.ResponsePacket;
@@ -20,8 +22,11 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter{
 	
 	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-		ResponsePacket response = (ResponsePacket)msg;
-		System.out.println(((StringData)response.getResponseDataList().get(0)).getText());
+		ByteBuffer buffer = ((ByteBuf)msg).nioBuffer();
+		byte[] bytes = new byte[buffer.remaining()];
+		buffer.get(bytes);
+		ResponsePacket response = ResponsePacket.fromByteArray(bytes);
+		System.out.println( ((StringData)response.getResponseDataList().get(0)).getText() );
 	}
 	
 	@Override
