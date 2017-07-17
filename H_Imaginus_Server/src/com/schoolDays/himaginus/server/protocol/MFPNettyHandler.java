@@ -18,7 +18,13 @@ public class MFPNettyHandler extends ChannelInboundHandlerAdapter {
 		executor = new PacketExecutor(process);
 		this.process = process;
 	}
-
+	
+	@Override
+	public void channelActive(ChannelHandlerContext ctx) throws Exception {
+		super.channelActive(ctx);
+		System.out.println(ctx.name()+"Login");
+	}
+	
 	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 		try {

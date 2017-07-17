@@ -19,8 +19,8 @@ public class PacketExecutor {
 		case 1:
 			ResponsePacket response = new ResponsePacket();
 			response.setResponseCode(1);
-			response.addResponseData(new StringData());
-			session.channel().write(mrp.getContext());
+			response.addResponseData(new StringData(mrp.getContext()));
+			session.channel().writeAndFlush(response);
 			break;
 		}
 	}
