@@ -51,7 +51,7 @@ public class JdbcConnector {
 		poolableDataSource = new PoolingDataSource(connectionPool);
 
 	}
-
+	
 	static public Connection getConnection() throws SQLException {
 		return getConnection(true);
 	}
