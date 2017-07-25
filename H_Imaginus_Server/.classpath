@@ -41,5 +41,6 @@
 	<classpathentry kind="lib" path="libs/tomcat-jni-8.0.27.jar"/>
 	<classpathentry kind="lib" path="libs/xbean-spring-4.5.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/H_Imaginus_Common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/H_SchoolDays_Common"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

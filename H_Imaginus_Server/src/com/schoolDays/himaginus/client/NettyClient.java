@@ -44,7 +44,7 @@ public class NettyClient {
 			
 			// ## TestCode
 			Scanner sc = new Scanner(System.in);
-			for(int i=0; i<3; i++){
+			while(f.channel().isOpen()){
 				System.out.print("서버로 보낼 코드 : ");
 				int code = sc.nextInt();
 				sc.nextLine();
