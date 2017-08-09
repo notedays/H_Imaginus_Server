@@ -23,6 +23,12 @@ import io.netty.handler.timeout.IdleStateHandler;
 public class ServerMain {
 	public static final int MAX_RECEIVE_SIZE = 2048;
 	
+	/**
+	 * 네티 서버를 load하는 함수
+	 * @param config : 서버 관련 값(DB 정보 및 기본적인 서버 정보)들을 가진 config.properties 파일
+	 * @param handler : 채널을 다룰 핸들러
+	 * @param executor : 패킷 정보를 다룰 Executor
+	 */
 	public static void load(File config, ChannelHandler handler ,PacketExecutor executor) throws IOException, InterruptedException {
 		ServerConfig.load(config);
 		

@@ -1,8 +1,12 @@
 package com.schoolDays.himaginus.client;
 
+import java.util.Iterator;
+import java.util.Map.Entry;
+
+import com.himaginus.common.data.CityData;
+import com.himaginus.common.data.TestData;
 import com.himaginus.common.packet.ResponsePacket;
 
-import data.CityData;
 import io.netty.channel.ChannelHandlerContext;
 
 public class ClientPacketExecutor {
@@ -19,13 +23,21 @@ public class ClientPacketExecutor {
 		switch (response.getCode()) {
 		case ResponsePacket.TEST:{
 			if(response.isSuccess()){
-				CityData data = response.<CityData>getData(0);
-				System.out.println("==="+data.getName()+"'s Info===");
-				System.out.println("ID : "+data.getId());
-				System.out.println("CountryCode : "+data.getCountryCode());
-				System.out.println("District : "+data.getDistrict());
-				System.out.println("Population : "+data.getPopulation());
-			}
+				TestData test = response.<TestData>getData(0);
+				for(CityData city : test.cityList){
+					System.out.println("==="+city.getName()+"'s Info===");
+					System.out.println("ID : "+city.getId());
+					System.out.println("CountryCode : "+city.getCountryCode());
+					System.out.println("District : "+city.getDistrict());
+					System.out.println("Population : "+city.getPopulation());
+				}
+				
+				Iterator<Entry<Integer,CityData>> iter = test.cityMap.entrySet().iterator();
+				while(iter.hasNext()){
+					Entry<Integer,CityData> entry = iter.next();
+					System.out.println(entry.getKey() +" : "+entry.getValue().getName());
+				}
+				}
 			break;
 		}
 		case ResponsePacket.REGIST:{

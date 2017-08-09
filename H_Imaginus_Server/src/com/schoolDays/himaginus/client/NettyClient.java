@@ -3,7 +3,6 @@ package com.schoolDays.himaginus.client;
 import java.util.Scanner;
 
 import com.himaginus.common.packet.RequestPacket;
-import com.himaginus.common.packet.ResponsePacket;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -55,6 +54,7 @@ public class NettyClient {
 				RequestPacket request = new RequestPacket(code, context);
 				f.channel().writeAndFlush(request);
 			}
+			sc.close();
 			// ## End
 			
 			f.channel().closeFuture().sync();
