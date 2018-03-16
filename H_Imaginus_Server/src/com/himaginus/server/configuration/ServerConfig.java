@@ -1,4 +1,4 @@
-package com.schoolDays.himaginus.server.configuration;
+package com.himaginus.server.configuration;
 
 import java.io.File;
 import java.io.FileInputStream;

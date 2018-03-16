@@ -1,4 +1,4 @@
-package com.schoolDays.himaginus.server.process;
+package com.himaginus.server.process;
 
 import com.himaginus.common.packet.RequestCode;
 import com.himaginus.common.packet.RequestPacket;

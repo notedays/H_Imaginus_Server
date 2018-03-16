@@ -1,4 +1,4 @@
-package com.schoolDays.himaginus.server.main;
+package com.himaginus.server.main;
 
 public class Tester {
 	public static void main(String[] args) {

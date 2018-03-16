@@ -1,9 +1,9 @@
-package com.schoolDays.himaginus.server.callback;
+package com.himaginus.server.callback;
 
 import com.himaginus.common.callback.CallBack;
 import com.himaginus.common.packet.ResponsePacket;
 import com.himaginus.common.util.Variance;
-import com.schoolDays.himaginus.server.user.User;
+import com.himaginus.server.user.User;
 
 public class ResponseCallBack implements CallBack {
 	

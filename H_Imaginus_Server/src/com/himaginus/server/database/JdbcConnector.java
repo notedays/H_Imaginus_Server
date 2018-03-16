@@ -1,4 +1,4 @@
-package com.schoolDays.himaginus.server.database;
+package com.himaginus.server.database;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -11,7 +11,7 @@ import org.apache.commons.dbcp.PoolableConnectionFactory;
 import org.apache.commons.dbcp.PoolingDataSource;
 import org.apache.commons.pool.impl.GenericObjectPool;
 
-import com.schoolDays.himaginus.server.configuration.ServerConfig;
+import com.himaginus.server.configuration.ServerConfig;
 
 public class JdbcConnector {
 	static private DataSource poolableDataSource;

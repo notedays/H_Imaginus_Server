@@ -1,4 +1,4 @@
-package com.schoolDays.himaginus.server.database;
+package com.himaginus.server.database;
 
 import java.util.HashMap;
 

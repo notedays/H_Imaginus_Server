@@ -1,4 +1,4 @@
-package com.schoolDays.himaginus.server.user;
+package com.himaginus.server.user;
 
 import com.himaginus.common.packet.ResponsePacket;
 

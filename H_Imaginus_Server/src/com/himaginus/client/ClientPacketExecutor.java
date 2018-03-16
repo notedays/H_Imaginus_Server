@@ -1,4 +1,4 @@
-package com.schoolDays.himaginus.client;
+package com.himaginus.client;
 
 import java.util.Iterator;
 import java.util.Map.Entry;

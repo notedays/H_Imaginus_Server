@@ -1,7 +1,7 @@
-package com.schoolDays.himaginus.server.process;
+package com.himaginus.server.process;
 
 import com.himaginus.common.packet.RequestPacket;
-import com.schoolDays.himaginus.server.process.PacketExecutor;
+import com.himaginus.server.process.PacketExecutor;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

@@ -1,8 +1,8 @@
-package com.schoolDays.himaginus.server.process;
+package com.himaginus.server.process;
 
 import java.util.Hashtable;
 
-import com.schoolDays.himaginus.server.user.User;
+import com.himaginus.server.user.User;
 
 import io.netty.channel.ChannelHandlerContext;
 

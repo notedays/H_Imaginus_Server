@@ -1,10 +1,10 @@
-package com.schoolDays.himaginus.server.main;
+package com.himaginus.server.main;
 
 import java.io.File;
 import java.io.IOException;
 
-import com.schoolDays.himaginus.server.configuration.ServerConfig;
-import com.schoolDays.himaginus.server.process.PacketExecutor;
+import com.himaginus.server.configuration.ServerConfig;
+import com.himaginus.server.process.PacketExecutor;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
