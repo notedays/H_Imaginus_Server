@@ -5,11 +5,13 @@ import java.util.Map.Entry;
 
 import com.himaginus.common.data.CityData;
 import com.himaginus.common.data.TestData;
+import com.himaginus.common.packet.RequestCode;
+import com.himaginus.common.packet.ResponseCode;
 import com.himaginus.common.packet.ResponsePacket;
 
 import io.netty.channel.ChannelHandlerContext;
 
-public class ClientPacketExecutor {
+public class ClientPacketExecutor implements RequestCode, ResponseCode{
 	
 	// # SingleTone
 	private static ClientPacketExecutor executor = new ClientPacketExecutor();
@@ -21,7 +23,7 @@ public class ClientPacketExecutor {
 	// # Execute Response from Server
 	public void execute(ChannelHandlerContext ctx, ResponsePacket response){
 		switch (response.getCode()) {
-		case ResponsePacket.TEST:{
+		case RESPONSE_TEST:{
 			if(response.isSuccess()){
 				TestData test = response.<TestData>getData(0);
 				for(CityData city : test.cityList){
@@ -40,7 +42,7 @@ public class ClientPacketExecutor {
 				}
 			break;
 		}
-		case ResponsePacket.REGIST:{
+		case RESPONSE_REGIST:{
 			if(response.isSuccess()){
 				System.out.println("가입에 성공 했습니다.");
 			}else{

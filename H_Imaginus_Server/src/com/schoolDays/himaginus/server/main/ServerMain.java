@@ -29,7 +29,7 @@ public class ServerMain {
 	 * @param handler : 채널을 다룰 핸들러
 	 * @param executor : 패킷 정보를 다룰 Executor
 	 */
-	public static void load(File config, ChannelHandler handler ,PacketExecutor executor) throws IOException, InterruptedException {
+	public static void load(File config, ChannelHandler handler) throws InterruptedException {
 		ServerConfig.load(config);
 		
 		EventLoopGroup bossGroup = new NioEventLoopGroup();

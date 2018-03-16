@@ -36,11 +36,10 @@
 	<classpathentry kind="lib" path="libs/netty-all-4.1.4.Final.jar" sourcepath="C:/Users/Team42/AppData/Local/Temp/decompiler/source/netty-all-4.1.4.Final-sources-1500882485206.jar"/>
 	<classpathentry kind="lib" path="libs/ognl-3.1.2.jar"/>
 	<classpathentry kind="lib" path="libs/slf4j-api-1.7.14.jar"/>
-	<classpathentry kind="lib" path="libs/spring-2.5.6.SEC03.jar"/>
+	<classpathentry kind="lib" path="libs/spring-2.5.6.SEC03.jar" sourcepath="C:/Users/Team42/AppData/Local/Temp/decompiler/source/spring-2.5.6.SEC03-sources.jar"/>
 	<classpathentry kind="lib" path="libs/tomcat-apr-5.5.23.jar"/>
 	<classpathentry kind="lib" path="libs/tomcat-jni-8.0.27.jar"/>
 	<classpathentry kind="lib" path="libs/xbean-spring-4.5.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/H_Imaginus_Common"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/H_SchoolDays_Common"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
