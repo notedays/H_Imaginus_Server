@@ -1,10 +1,10 @@
 package com.himaginus.server.main;
 
 import java.io.File;
-import java.io.IOException;
 
+import com.himaginus.common.packet.RequestPacket;
+import com.himaginus.common.packet.ResponsePacket;
 import com.himaginus.server.configuration.ServerConfig;
-import com.himaginus.server.process.PacketExecutor;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -29,8 +29,8 @@ public class ServerMain {
 	 * @param handler : 채널을 다룰 핸들러
 	 * @param executor : 패킷 정보를 다룰 Executor
 	 */
-	public static void load(File config, ChannelHandler handler) throws InterruptedException {
-		ServerConfig.load(config);
+	public static void load(File config, RequestPacket loadRequest, ResponsePacket loadResponse, ChannelHandler handler) throws InterruptedException {
+		ServerConfig.load(config, loadRequest, loadResponse);
 		
 		EventLoopGroup bossGroup = new NioEventLoopGroup();
 		EventLoopGroup workerGroup = new NioEventLoopGroup();

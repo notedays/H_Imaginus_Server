@@ -19,9 +19,9 @@ public class ServerConfig {
 	public static String dbUser;
 	public static String dbPassword;
 
-	public static boolean isTestMode;
+	public static boolean isTestMode = true;
 
-	public static void load(File file) {
+	public static void load(File file, RequestPacket loadRequest, ResponsePacket loadResponse) {
 		Properties prop = new Properties();
 		try {
 			prop.load(new FileInputStream(file));
@@ -36,8 +36,8 @@ public class ServerConfig {
 		dbPassword = prop.getProperty("dbPassword");
 
 		if (isTestMode) {
-			TestUtil.loadRequestMap(new RequestPacket());
-			TestUtil.loadResponseMap(new ResponsePacket());
+			TestUtil.loadRequestMap(loadRequest);
+			TestUtil.loadResponseMap(loadResponse);
 		}
 	}
 }
